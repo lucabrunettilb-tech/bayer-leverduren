@@ -2,409 +2,416 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Bayer Leverduren | Sito Ufficiale</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-    color: #111;
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#080808;
+color:white;
 }
 
-header {
-    background: #111;
-    color: white;
-    padding: 20px 6%;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 4px solid #d71920;
+header{
+background:#111;
+border-bottom:3px solid #d71920;
+padding:18px 6%;
+position:sticky;
+top:0;
+z-index:100;
 }
 
-.nav {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 900;
+.logo{
+font-size:22px;
+font-weight:900;
 }
 
-.logo span {
-    color: #d71920;
+.logo span{
+color:#d71920;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 14px;
+.menu{
+position:relative;
 }
 
-.hero {
-    background: linear-gradient(120deg, #111 60%, #d71920 60%);
-    color: white;
-    padding: 90px 7%;
+.menu button{
+background:#d71920;
+color:white;
+border:0;
+border-radius:7px;
+padding:11px 16px;
+font-weight:bold;
+font-size:15px;
 }
 
-.hero-content {
-    max-width: 1200px;
-    margin: auto;
+.dropdown{
+display:none;
+position:absolute;
+right:0;
+top:48px;
+background:#181818;
+border:1px solid #333;
+border-radius:8px;
+min-width:220px;
+overflow:hidden;
 }
 
-.hero small {
-    font-weight: bold;
-    letter-spacing: 2px;
+.dropdown a{
+display:block;
+color:white;
+text-decoration:none;
+padding:15px 18px;
+border-bottom:1px solid #292929;
 }
 
-.hero h1 {
-    font-size: clamp(45px, 8vw, 85px);
-    margin: 15px 0;
-    text-transform: uppercase;
+.dropdown a:hover{
+background:#d71920;
 }
 
-.hero p {
-    font-size: 20px;
-    color: #ddd;
+.menu:hover .dropdown{
+display:block;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    background: #d71920;
-    color: white;
-    padding: 14px 25px;
-    border-radius: 7px;
-    text-decoration: none;
-    font-weight: bold;
+.hero{
+background:
+linear-gradient(120deg,#050505 58%,#a90008 58%);
+padding:95px 7%;
 }
 
-section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 65px 7%;
+.hero-content{
+max-width:1200px;
+margin:auto;
 }
 
-h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.hero small{
+color:#d71920;
+font-weight:bold;
+letter-spacing:3px;
 }
 
-.line {
-    width: 55px;
-    height: 5px;
-    background: #d71920;
-    margin-bottom: 30px;
+.hero h1{
+font-size:clamp(45px,8vw,85px);
+margin:18px 0;
+text-transform:uppercase;
+line-height:.95;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
+.hero p{
+font-size:19px;
+color:#ccc;
+max-width:650px;
+line-height:1.6;
 }
 
-.card {
-    background: white;
-    padding: 23px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
-    border-top: 4px solid #d71920;
+.button{
+display:inline-block;
+margin-top:30px;
+background:#d71920;
+color:white;
+padding:14px 24px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.card h3 {
-    margin-bottom: 8px;
+section{
+max-width:1200px;
+margin:auto;
+padding:65px 7%;
 }
 
-.role {
-    color: #777;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
+h2{
+font-size:35px;
+margin-bottom:10px;
 }
 
-.quote {
-    font-size: 17px;
-    line-height: 1.5;
-    font-style: italic;
+.line{
+width:55px;
+height:5px;
+background:#d71920;
+margin-bottom:30px;
 }
 
-.quote strong {
-    display: block;
-    margin-top: 15px;
-    font-style: normal;
+.grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(230px,1fr));
+gap:18px;
 }
 
-.price {
-    font-size: 23px;
-    font-weight: bold;
-    margin: 15px 0;
+.card{
+background:#151515;
+border:1px solid #292929;
+border-top:4px solid #d71920;
+border-radius:12px;
+padding:24px;
 }
 
-.buy {
-    background: #111;
-    color: white;
-    border: 0;
-    padding: 11px 18px;
-    border-radius: 6px;
-    font-weight: bold;
+.card h3{
+margin-bottom:10px;
 }
 
-.news {
-    border-left: 5px solid #d71920;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.card p{
+color:#aaa;
+line-height:1.6;
 }
 
-footer {
-    background: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 40px 20px;
+.type{
+font-size:11px;
+font-weight:bold;
+color:#d71920;
+margin-bottom:9px;
 }
 
-footer strong {
-    color: white;
+footer{
+background:#050505;
+border-top:1px solid #292929;
+text-align:center;
+padding:40px;
+color:#777;
 }
 
-@media(max-width:700px) {
-    nav {
-        display: none;
-    }
-
-    .hero {
-        padding: 60px 7%;
-    }
-
-    section {
-        padding: 50px 7%;
-    }
+footer strong{
+color:white;
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
+
 <div class="nav">
 
 <div class="logo">
 BAYER <span>LEVERDUREN</span>
 </div>
 
-<nav>
-<a href="#comunicati">COMUNICATI</a>
-<a href="#rosa">ROSA</a>
-<a href="#dichiarazioni">DICHIARAZIONI</a>
-<a href="#shop">SHOP</a>
-</nav>
+
+<div class="menu">
+
+<button>☰ MENU</button>
+
+
+<div class="dropdown">
+
+<a href="index.html">
+🏠 Home
+</a>
+
+<a href="comunicati.html">
+📰 Comunicati ufficiali
+</a>
+
+<a href="rosa.html">
+👥 La Rosa
+</a>
+
+<a href="dichiarazioni.html">
+🎙️ Dichiarazioni
+</a>
+
+<a href="shop.html">
+🛍️ Shop ufficiale
+</a>
 
 </div>
+
+</div>
+
+</div>
+
 </header>
 
 
+
 <div class="hero">
+
 <div class="hero-content">
 
 <small>SITO UFFICIALE</small>
 
-<h1>Bayer Leverduren</h1>
+<h1>
+Bayer<br>
+Leverduren
+</h1>
 
 <p>
 La casa ufficiale del Bayer Leverduren.
-Notizie, rosa, dichiarazioni e merchandising.
+Notizie, mercato, rosa, dichiarazioni
+e tutto ciò che riguarda il club.
 </p>
 
-<a class="button" href="#rosa">SCOPRI LA ROSA</a>
+<a class="button" href="comunicati.html">
+ULTIME NOTIZIE
+</a>
 
 </div>
+
 </div>
 
 
-<section id="comunicati">
 
-<h2>Comunicati Ufficiali</h2>
+<section>
+
+<h2>Ultime notizie</h2>
+
 <div class="line"></div>
 
-<div class="news">
 
-<h3>Benvenuti nella nuova stagione</h3>
+<div class="grid">
+
+
+<div class="card">
+
+<div class="type">
+COMUNICATO UFFICIALE · INIZIO STAGIONE
+</div>
+
+<h3>
+Il Bayer Leverduren dà il via alla nuova stagione
+</h3>
 
 <p>
-Il Bayer Leverduren dà il benvenuto a tutti i nuovi giocatori
-e augura alla squadra una grande stagione.
-L'obiettivo è quello di essere protagonisti su ogni campo.
+Il presidente e tutta la società augurano una grande stagione
+ai nuovi giocatori e a tutta la squadra.
 </p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="type">
+DICHIARAZIONI · RADIO FRANCAVILLA FONTANA
+</div>
+
+<h3>
+Baturina: “Sono rammaricato per il comportamento di Palazzo”
+</h3>
+
+<p>
+Le dichiarazioni di Martin Baturina sul suo passato
+e sul nuovo progetto del Bayer Leverduren.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="type">
+MERCATO · BAYER LEVERDUREN
+</div>
+
+<h3>
+Il club prepara la nuova stagione
+</h3>
+
+<p>
+Il Bayer Leverduren continua a lavorare sul mercato
+con l'obiettivo di costruire una rosa competitiva.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<section id="rosa">
 
-<h2>La Rosa</h2>
+<section>
+
+<h2>Il club</h2>
+
 <div class="line"></div>
 
 
-<h3 style="margin-bottom:15px;">Portieri</h3>
-
 <div class="grid">
 
-<div class="card"><h3>Svilar</h3><div class="role">Portiere</div></div>
-<div class="card"><h3>Gollini</h3><div class="role">Portiere</div></div>
-<div class="card"><h3>De Marzi</h3><div class="role">Portiere</div></div>
+
+<div class="card">
+
+<h3>👥 La Rosa</h3>
+
+<p>
+Scopri tutti i giocatori che compongono
+la rosa del Bayer Leverduren.
+</p>
+
+<br>
+
+<a class="button" href="rosa.html">
+SCOPRI LA ROSA
+</a>
 
 </div>
 
 
-<h3 style="margin:40px 0 15px;">Difensori</h3>
 
-<div class="grid">
+<div class="card">
 
-<div class="card"><h3>Mancini</h3><div class="role">Difensore</div></div>
-<div class="card"><h3>Thiaw</h3><div class="role">Difensore</div></div>
-<div class="card"><h3>Akanji</h3><div class="role">Difensore</div></div>
-<div class="card"><h3>Zappacosta</h3><div class="role">Difensore</div></div>
-<div class="card"><h3>Muldur</h3><div class="role">Difensore</div></div>
-<div class="card"><h3>Coco</h3><div class="role">Difensore</div></div>
-<div class="card"><h3>Heggem</h3><div class="role">Difensore</div></div>
-<div class="card"><h3>Beukema</h3><div class="role">Difensore</div></div>
+<h3>🎙️ Dichiarazioni</h3>
 
-</div>
+<p>
+Le parole dei protagonisti del Bayer Leverduren.
+</p>
 
+<br>
 
-<h3 style="margin:40px 0 15px;">Centrocampisti</h3>
-
-<div class="grid">
-
-<div class="card"><h3>Alajbegovic</h3><div class="role">Centrocampista</div></div>
-<div class="card"><h3>Baturina</h3><div class="role">Centrocampista</div></div>
-<div class="card"><h3>Calò</h3><div class="role">Centrocampista</div></div>
-<div class="card"><h3>Frattesi</h3><div class="role">Centrocampista</div></div>
-<div class="card"><h3>Pellegrini</h3><div class="role">Centrocampista</div></div>
-<div class="card"><h3>Bernardeschi</h3><div class="role">Centrocampista</div></div>
-<div class="card"><h3>Barella</h3><div class="role">Centrocampista</div></div>
-<div class="card"><h3>Cristante</h3><div class="role">Centrocampista</div></div>
+<a class="button" href="dichiarazioni.html">
+LE DICHIARAZIONI
+</a>
 
 </div>
 
 
-<h3 style="margin:40px 0 15px;">Attaccanti</h3>
 
-<div class="grid">
+<div class="card">
 
-<div class="card"><h3>Dybala</h3><div class="role">Attaccante</div></div>
-<div class="card"><h3>Leão</h3><div class="role">Attaccante</div></div>
-<div class="card"><h3>Pellegrino</h3><div class="role">Attaccante</div></div>
-<div class="card"><h3>Soulé</h3><div class="role">Attaccante</div></div>
-<div class="card"><h3>M. Muntandwa</h3><div class="role">Attaccante</div></div>
-<div class="card"><h3>Raimondo</h3><div class="role">Attaccante</div></div>
+<h3>🛍️ Shop</h3>
+
+<p>
+Scopri il merchandising ufficiale
+del Bayer Leverduren.
+</p>
+
+<br>
+
+<a class="button" href="shop.html">
+VAI ALLO SHOP
+</a>
+
+</div>
+
 
 </div>
 
 </section>
 
-
-<section id="dichiarazioni">
-
-<h2>Dichiarazioni</h2>
-<div class="line"></div>
-
-<div class="grid">
-
-<div class="card">
-<p class="quote">
-"Sono arrivato qui con grande voglia di vincere.
-Abbiamo una squadra fortissima."
-<strong>— Nicolò Barella</strong>
-</p>
-</div>
-
-<div class="card">
-<p class="quote">
-"Il progetto mi ha convinto subito.
-Voglio dare tutto per questa maglia."
-<strong>— Martin Baturina</strong>
-</p>
-</div>
-
-<div class="card">
-<p class="quote">
-"Abbiamo qualità in ogni reparto.
-Ora dobbiamo dimostrarlo in campo."
-<strong>— Manuel Akanji</strong>
-</p>
-</div>
-
-<div class="card">
-<p class="quote">
-"Vestire questa maglia è un grande orgoglio.
-Siamo pronti a lottare."
-<strong>— Paulo Dybala</strong>
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="shop">
-
-<h2>Shop Ufficiale</h2>
-<div class="line"></div>
-
-<div class="grid">
-
-<div class="card">
-<div style="font-size:50px;">👕</div>
-<h3>Maglia Home 2026/27</h3>
-<p>La maglia ufficiale del Bayer Leverduren.</p>
-<div class="price">€89,99</div>
-<button class="buy">ACQUISTA</button>
-</div>
-
-<div class="card">
-<div style="font-size:50px;">👕</div>
-<h3>Maglia Away 2026/27</h3>
-<p>La seconda divisa ufficiale del club.</p>
-<div class="price">€84,99</div>
-<button class="buy">ACQUISTA</button>
-</div>
-
-<div class="card">
-<div style="font-size:50px;">🧣</div>
-<h3>Sciarpa Ufficiale</h3>
-<p>Porta sempre con te i colori del Bayer.</p>
-<div class="price">€24,99</div>
-<button class="buy">ACQUISTA</button>
-</div>
-
-<div class="card">
-<div style="font-size:50px;">🧢</div>
-<h3>Cappellino Ufficiale</h3>
-<p>Merchandising ufficiale del club.</p>
-<div class="price">€29,99</div>
-<button class="buy">ACQUISTA</button>
-</div>
-
-</div>
-
-</section>
 
 
 <footer>
@@ -413,13 +420,14 @@ Siamo pronti a lottare."
 
 <br><br>
 
-Sito Ufficiale • Stagione 2026/27
+Sito Ufficiale · Stagione 2026/27
 
-<br>
+<br><br>
 
 © 2026 Bayer Leverduren
 
 </footer>
+
 
 </body>
 </html>
